@@ -7,7 +7,7 @@ yolov5_deepsort:
   confidence_threshold: 0.1
   disp_obj_detect_box: True   # Set to true if you want to view the detections from object detector 
  
- tracker:cogt
+ tracker:
   max_age : 5                # Maximum number of frames to keep a track alive without new detections. Default is 30
   n_init: 1                  # Minimum number of detections needed to start a new track. Default is 3
   nms_max_overlap: 1.0       # Maximum overlap between bounding boxes allowed for non maximal supression(NMS).If two bounding boxes overlap by more than this value, the one with the lower confidence score is suppressed. Defaults to 1.0.
@@ -31,8 +31,8 @@ yolov5_deepsort:
 
  dataloader:
 
-  data_source : "video file"   # source can be set to either "video file" or "webcam"
-  webcam_id : 2                # if using external webcam. Please modify based on your system
+  data_source : "webcam"   # source can be set to either "video file" or "webcam"
+  webcam_id : 0                # using default camera
   data_path: "./data/people.mp4" # path to the video file if you are using a video as input
   frame_width:  1280
   frame_height:  720
